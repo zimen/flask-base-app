@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}
+Login
+{% endblock %}
+
+{% block content %}
+
+<div class="main2">
+  <h1>Log in</h1>
+
+  <div class="rowflex">
+
+    <form method="POST" class="form-register">
+      <div>{{ form.hidden_tag() }}</div>
+      <div class="form-inside">
+        <div class="email">
+          <div class="email-label">Email:</div>
+          {{form.email(placeholder="exemple@exemple.com",
+          class="form-control")}}
+        </div>
+        <div class="password">
+          <div class="password-label">Password:</div>
+          {{form.password(placeholder="***********", class="form-control")}}
+        </div>
+
+        <div class="rowflex">
+          <div class="element">{{ form.submit(class="btn bouton", id="button")}}</div>
+          <div class="element"><a href="{{ url_for('main.add_user') }}">Register</a></div>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+<div class="main1">
+  <h1> Welwom to my website project</h1>
+  <p>
+    Content is coming soon ...
+  </p>
+</div>
+
+
+{% endblock %}
