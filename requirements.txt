@@ -17,3 +17,4 @@ WTForms==3.0.1
 protobuf==3.7.1
 psycopg2==2.8.4
 urllib3
+uvicorn
