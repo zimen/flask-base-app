@@ -47,3 +47,6 @@ def logout_page():
     logout_user()
     flash('Vous êtes correctement déconnecté',category="success")
     return redirect(url_for('main.login'))
+
+def compute_item(x):
+    return x*2 
