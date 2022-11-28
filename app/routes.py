@@ -20,6 +20,7 @@ def add_user():
             check = Users.query.filter_by(email_address = form.email_address.data).first()
             if check : 
                 flash('Email already exists', category='danger')
+                request.post("")
                 return redirect(url_for('main.add_user'))
             else:
                 Users(last_name = form.last_name.data, first_name = form.first_name.data, email_address = form.email_address.data, password_hash = generate_password_hash(form.password_hash.data, method='sha256')).save_to_db()
