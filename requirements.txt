@@ -8,3 +8,4 @@ SQLAlchemy==1.4.40
 Werkzeug==2.0.1
 WTForms==3.0.1
 pytest==7.2.0
+requests
